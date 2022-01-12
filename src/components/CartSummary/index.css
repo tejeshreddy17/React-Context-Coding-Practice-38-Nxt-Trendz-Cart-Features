@@ -1,1 +1,43 @@
 /* Write your CSS here */
+.cart-summary-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+@media screen and (min-width: 576px) {
+  .cart-summary-container {
+    align-self: flex-end;
+  }
+}
+
+.order-total {
+  font-size: 24px;
+  text-align: left;
+  color: #616e7c;
+  margin-bottom: 5px;
+}
+.checkout-button {
+  background-color: #0b69ff;
+  border: none;
+  color: white;
+  font-weight: 500;
+  font-family: roboto;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  font-size: 16px;
+  align-self: stretch;
+  border-radius: 8px;
+  cursor: pointer;
+}
+@media screen and (min-width: 576px) {
+  .checkout-button {
+    align-self: stretch;
+  }
+}
+.cart-summary-price {
+  color: #171f46;
+}
+.cart-summary-quantity {
+  color: #616e7c;
+  font-weight: 500;
+}

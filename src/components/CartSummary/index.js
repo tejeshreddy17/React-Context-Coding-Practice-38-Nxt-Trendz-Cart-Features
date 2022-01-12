@@ -1,4 +1,6 @@
 // Write your code here
+import './index.css'
+
 import CartContext from '../../context/CartContext'
 
 const CartSummary = () => (
@@ -13,10 +15,17 @@ const CartSummary = () => (
         (prevValue, presentValue) => presentValue + prevValue,
       )
       return (
-        <div>
-          <h1>Order Total :Rs.{totalCost}</h1>
-          <p>{cartListQuantity} Items in cart</p>
-          <button type="button">Checkout</button>
+        <div className="cart-summary-container">
+          <h1 className="order-total">
+            Order Total:
+            <span className="cart-summary-price"> Rs.{totalCost}/-</span>
+          </h1>
+          <p className="cart-summary-quantity">
+            {cartListQuantity} Items in cart
+          </p>
+          <button className="checkout-button" type="button">
+            Checkout
+          </button>
         </div>
       )
     }}
